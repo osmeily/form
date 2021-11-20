@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,87 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Formulario</title>
 </head>
+
 <body>
-    <div class="form-container">
-        <header class="header">
-            <h1 id="title">Formulario de encuesta</h1>
-            <p id="description">
-                Gracias por tomarte el tiempo de responder esta encuesta.
-            </p>
-        </header>
-        <form id="survey-form">
-            <div>
-                <label id="name-label">Nombre</label>
-                <input type="text" id="name" placeholder="Ingrese su nombre" required>
+    <main>
+        <div class="container">
+            <header class="header">
+                <h1 id="title">Formulario de encuesta</h1>
+                <p id="description">
+                    Gracias por tomarte el tiempo de responder esta encuesta.
+                </p>
+            </header>
+            <div class="form-container">
+                <form id="survey-form">
+                    <div class="form-control">
+                        <label id="name-label">Nombre</label>
+                        <input type="text" id="name" placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="form-control">
+                        <label id="email-label">Email</label>
+                        <input type="email" id="email" placeholder="Ingrese su correo" required>
+                    </div>
+                    <div class="form-control">
+                        <label id="number-label">Edad <span><i>(opcional)</i></span></label>
+                        <input type="number" id="number" placeholder="Ingrese su edad" min="10" max="99">
+                    </div>
+                    <div class="form-control">
+                        <p>¿Cuál es tu ocupación actual?</p>
+                        <select id="dropdown" required>
+                            <option value="estudiante"> Estudiante</option>
+                            <option value="trabajo"> Trabajo de tiempo completo</option>
+                            <option value="desempleado"> Sin empleo</option>
+                            <option value="free"> Freelancer</option>
+                            <option value="prefiero no decir"> Prefiero no decir</option>
+                            <option value="Otro"> Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <p>¿Recomendarías estudiar programación?</p>
+                        <div>
+                            <input type="radio" name="opcion" value="totalmente"><label
+                                for="totalmente"> Totalmente</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="opcion" value="si"><label for="si"> Sí</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="opcion" value="no-estoy-seguro"><label for="no-estoy-seguro"> No
+                                estoy seguro</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="opcion" value="en-lo-absoluto"><label for="en-lo-absoluto"> En lo
+                                absoluto</label>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <p>¿Qué te llama la atención?</p>
+                        <div>
+                            <input id="checkbox" type="checkbox" name="check" value="frontend"><label for="frontend"> Front-End</label>
+                        </div>
+                        <div>
+                            <input id="checkbox" type="checkbox" name="check" value="backend"><label for="backend"> Back-End</label>
+                        </div>
+                        <div>
+                            <input id="checkbox" type="checkbox" name="check" value="dataciencia"><label for="dataciencia"> Ciencia de
+                                datos</label>
+                        </div>
+                        <div>
+                            <input id="checkbox" type="checkbox" name="check" value="machine"><label for="machine"> Machine
+                                Learning</label>
+                        </div>
+                        <div>
+                            <input id="checkbox" type="checkbox" name="check" value="finances"><label for="finances"> Finances</label>
+                        </div>
+                    </div>
+                    <label id="text-label">¿Algún comentario?</label>
+                    <textarea id="textarea" cols="1" rows="7" placeholder="Comenta aquí..."></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
-            <div>
-                <label id="email-label">Email</label>
-                <input type="email" id="email" placeholder="Ingrese su correo" required>
-            </div>
-            <div>
-                <label id="number-label">Edad <span><i>(opcional)</i></span></label>
-                <input type="number" id="number" placeholder="Ingrese su edad" min="10" max="99">
-            </div>
-            <div>
-                <p>¿Cuál es tu ocupación actual?</p>
-                <select id="dropdown" required>
-                    <option value="estudiante">Estudiante</option>
-                    <option value="trabajo">Trabajo de tiempo completo</option>
-                    <option value="desempleado">Sin empleo</option>
-                    <option value="free">Freelancer</option>
-                    <option value="prefiero no decir">Prefiero no decir</option>
-                    <option value="Otro">Otro</option>
-                </select>
-            </div>
-            <div>
-                <p>¿Recomedarías estudiar programación?</p>
-                    <input type="radio" name="opcion" value="totalmente"><label for="totalmente">Totalmente</label>
-                    <input type="radio" name="opcion" value="si"><label for="si">Sí</label>
-                    <input type="radio" name="opcion" value="no-estoy-seguro"><label for="no-estoy-seguro">No estoy seguro</label>
-                    <input type="radio" name="opcion" value="en-lo-absoluto"><label for="en-lo-absoluto">En lo absoluto</label>
-            </div>
-            
-        </form>
-    </div>
+
+        </div>
+    </main>
 </body>
+
 </html>
